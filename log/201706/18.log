@@ -1,0 +1,208 @@
+---------------------------------------------------------------
+[ 2017-06-18T00:41:02+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/user/get_token
+[ info ] zerg.com/api/v1/user/get_token [运行时间：2.035592s][吞吐率：0.49req/s] [内存消耗：4,786.91kb] [文件加载：56]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.098469s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.189855s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `openid` = 'ov5YM0TreV0qoj_rwKyoaSsHtV_U' LIMIT 1 [ RunTime:0.175538s ]
+---------------------------------------------------------------
+[ 2017-06-18T00:41:07+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：0.429892s][吞吐率：2.33req/s] [内存消耗：4,973.65kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032700s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.046490s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.061579s ]
+---------------------------------------------------------------
+[ 2017-06-18T00:41:41+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：0.291357s][吞吐率：3.43req/s] [内存消耗：4,973.65kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022539s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.031810s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.001318s ]
+---------------------------------------------------------------
+[ 2017-06-18T00:42:12+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：1.017210s][吞吐率：0.98req/s] [内存消耗：5,147.08kb] [文件加载：63]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002099s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.066621s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.027882s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.056813s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.055371s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`total_price` , `user_id` , `snap_img` , `snap_name` , `snap_items` , `total_count` , `snap_address` , `order_no` , `create_time` , `update_time`) VALUES (0.03 , 1 , 'http://zerg.com/images/product-vg@1.png' , '芹菜 半斤等' , '[{\"id\":1,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"productPrice\":0.02,\"count\":2,\"hasStock\":true},{\"id\":2,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"productPrice\":0.01,\"count\":1,\"hasStock\":true}]' , 3 , '{\"id\":1,\"name\":\"\\u5218\\u4e2d\\u6797\",\"mobile\":\"17739650739\",\"province\":\"\\u6cb3\\u5357\",\"city\":\"\\u4fe1\\u9633\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u7f57\\u5c71\\u53bf\\u5468\\u515a\\u9547\\u6842\\u5e97\\u6751\\u6613\\u697c\\u7ec4\",\"delete_time\":null,\"user_id\":1,\"update_time\":\"1970-01-01 08:00:00\"}' , 'A61817732269932' , 1497717732 , 1497717732) [ RunTime:0.194327s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.171419s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (1 , 2 , 18) [ RunTime:0.044516s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 1 , 18) [ RunTime:0.017473s ]
+---------------------------------------------------------------
+[ 2017-06-18T00:46:32+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：0.684779s][吞吐率：1.46req/s] [内存消耗：5,146.42kb] [文件加载：63]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016262s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.026189s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.001356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.025896s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.027460s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`total_price` , `user_id` , `snap_img` , `snap_name` , `snap_items` , `total_count` , `snap_address` , `order_no` , `create_time` , `update_time`) VALUES (0.03 , 1 , 'http://zerg.com/images/product-vg@1.png' , '芹菜 半斤等' , '[{\"id\":1,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"productPrice\":0.02,\"count\":2,\"hasStock\":true},{\"id\":2,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"productPrice\":0.01,\"count\":1,\"hasStock\":true}]' , 3 , '{\"id\":1,\"name\":\"\\u5218\\u4e2d\\u6797\",\"mobile\":\"17739650739\",\"province\":\"\\u6cb3\\u5357\",\"city\":\"\\u4fe1\\u9633\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u7f57\\u5c71\\u53bf\\u5468\\u515a\\u9547\\u6842\\u5e97\\u6751\\u6613\\u697c\\u7ec4\",\"delete_time\":null,\"user_id\":1,\"update_time\":\"1970-01-01 08:00:00\"}' , 'A618179918550660' , 1497717991 , 1497717991) [ RunTime:0.050333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.045306s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (1 , 2 , 19) [ RunTime:0.174051s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 1 , 19) [ RunTime:0.000844s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:01:25+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/pay/proPay
+[ info ] zerg.com/api/v1/pay/proPay [运行时间：0.696317s][吞吐率：1.44req/s] [内存消耗：5,735.97kb] [文件加载：68]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052153s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.026474s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.031524s ]
+[ sql ] [ SQL ] SELECT * FROM `order_product` WHERE  `order_id` = 19 [ RunTime:0.001102s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.029876s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.001166s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:02:19+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/pay/proPay
+[ info ] zerg.com/api/v1/pay/proPay [运行时间：0.391810s][吞吐率：2.55req/s] [内存消耗：5,750.09kb] [文件加载：69]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001877s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.029651s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.027914s ]
+[ sql ] [ SQL ] SELECT * FROM `order_product` WHERE  `order_id` = 19 [ RunTime:0.000862s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.027938s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.000919s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:02:56+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/pay/proPay
+[ info ] zerg.com/api/v1/pay/proPay [运行时间：0.460462s][吞吐率：2.17req/s] [内存消耗：5,749.99kb] [文件加载：69]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028184s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.028868s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001391s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.032494s ]
+[ sql ] [ SQL ] SELECT * FROM `order_product` WHERE  `order_id` = 19 [ RunTime:0.001122s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.029626s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.000962s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:03:52+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/pay/proPay
+[ info ] zerg.com/api/v1/pay/proPay [运行时间：0.432649s][吞吐率：2.31req/s] [内存消耗：5,750.02kb] [文件加载：69]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.050930s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.024620s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `id` = 19 LIMIT 1 [ RunTime:0.001160s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.025999s ]
+[ sql ] [ SQL ] SELECT * FROM `order_product` WHERE  `order_id` = 19 [ RunTime:0.000728s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.031811s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.001095s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:08:34+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：0.711941s][吞吐率：1.40req/s] [内存消耗：5,148.60kb] [文件加载：63]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020360s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.026809s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.001700s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_address` [ RunTime:0.024385s ]
+[ sql ] [ SQL ] SELECT * FROM `user_address` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.000938s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.025076s ]
+[ sql ] [ SQL ] INSERT INTO `order` (`total_price` , `user_id` , `snap_img` , `snap_name` , `snap_items` , `total_count` , `snap_address` , `order_no` , `create_time` , `update_time`) VALUES (0.03 , 1 , 'http://zerg.com/images/product-vg@1.png' , '芹菜 半斤等' , '[{\"id\":1,\"name\":\"\\u82b9\\u83dc \\u534a\\u65a4\",\"productPrice\":0.02,\"count\":2,\"hasStock\":true},{\"id\":2,\"name\":\"\\u68a8\\u82b1\\u5e26\\u96e8 3\\u4e2a\",\"productPrice\":0.01,\"count\":1,\"hasStock\":true}]' , 3 , '{\"id\":1,\"name\":\"\\u5218\\u4e2d\\u6797\",\"mobile\":\"17739650739\",\"province\":\"\\u6cb3\\u5357\",\"city\":\"\\u4fe1\\u9633\",\"country\":\"\\u4e2d\\u56fd\",\"detail\":\"\\u7f57\\u5c71\\u53bf\\u5468\\u515a\\u9547\\u6842\\u5e97\\u6751\\u6613\\u697c\\u7ec4\",\"delete_time\":null,\"user_id\":1,\"update_time\":\"1970-01-01 08:00:00\"}' , 'A618193145223321' , 1497719314 , 1497719314) [ RunTime:0.022397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.227528s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (1 , 2 , 20) [ RunTime:0.000676s ]
+[ sql ] [ SQL ] INSERT INTO `order_product` (`product_id` , `count` , `order_id`) VALUES (2 , 1 , 20) [ RunTime:0.000300s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:08:35+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/pay/proPay
+[ info ] zerg.com/api/v1/pay/proPay [运行时间：0.414897s][吞吐率：2.41req/s] [内存消耗：5,750.12kb] [文件加载：69]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001588s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.026932s ]
+[ sql ] [ SQL ] SELECT * FROM `order` WHERE  `id` = 20 LIMIT 1 [ RunTime:0.001248s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order_product` [ RunTime:0.026893s ]
+[ sql ] [ SQL ] SELECT * FROM `order_product` WHERE  `order_id` = 20 [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `product` [ RunTime:0.027052s ]
+[ sql ] [ SQL ] SELECT * FROM `product` WHERE  `id` IN (1,2) [ RunTime:0.001275s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:11:58+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.521467s][吞吐率：1.92req/s] [内存消耗：5,048.26kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032268s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.023972s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001272s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.025043s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.016588s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.002147s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.041336s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `id` IN (65,2,3,1) [ RunTime:0.061088s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:13:41+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.393836s][吞吐率：2.54req/s] [内存消耗：5,049.13kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001463s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.067911s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.056762s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001152s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.032376s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `id` IN (65,2,3,1) [ RunTime:0.000977s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:15:15+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.126558s][吞吐率：7.90req/s] [内存消耗：2,154.15kb] [文件加载：35]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'c08f9484-ceb8-ddb4-6c04-2ab9769b9b9f',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'version' => 'v1',
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT file
+[ error ] test
+---------------------------------------------------------------
+[ 2017-06-18T01:20:08+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.135052s][吞吐率：7.40req/s] [内存消耗：2,397.62kb] [文件加载：41]
+[ error ] [1]Error Processing Request[F:\study\zerg\application\api\controller\v1\Banner.php:9]
+[ error ] Error Processing Request
+---------------------------------------------------------------
+[ 2017-06-18T01:21:33+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.158772s][吞吐率：6.30req/s] [内存消耗：2,420.16kb] [文件加载：42]
+[ error ] [1]Class 'app\api\controller\v1\Log' not found[F:\study\zerg\application\api\controller\v1\Banner.php:9]
+[ error ] Class 'app\api\controller\v1\Log' not found
+---------------------------------------------------------------
+[ 2017-06-18T01:21:49+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.165839s][吞吐率：6.03req/s] [内存消耗：2,420.07kb] [文件加载：42]
+[ error ] [1]Class 'Log' not found[F:\study\zerg\application\api\controller\v1\Banner.php:9]
+[ error ] Class 'Log' not found
+---------------------------------------------------------------
+[ 2017-06-18T01:27:43+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.397520s][吞吐率：2.52req/s] [内存消耗：5,049.95kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052702s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.027795s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000775s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.027444s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.000998s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001161s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.029907s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `id` IN (65,2,3,1) [ RunTime:0.000992s ]
+---------------------------------------------------------------
+[ 2017-06-18T01:29:51+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.343792s][吞吐率：2.91req/s] [内存消耗：5,047.95kb] [文件加载：59]
+[ error ] 获取预订单失败
+---------------------------------------------------------------
+[ 2017-06-18T01:30:07+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.349038s][吞吐率：2.87req/s] [内存消耗：5,047.95kb] [文件加载：59]
+[ error ] 获取预订单失败
+---------------------------------------------------------------
+[ 2017-06-18T01:30:24+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.344736s][吞吐率：2.90req/s] [内存消耗：5,048.72kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025934s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner` [ RunTime:0.028065s ]
+[ sql ] [ SQL ] SELECT * FROM `banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001007s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `banner_item` [ RunTime:0.029665s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.000993s ]
+[ sql ] [ SQL ] SELECT * FROM `banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `img` [ RunTime:0.028751s ]
+[ sql ] [ SQL ] SELECT * FROM `img` WHERE  `id` IN (65,2,3,1) [ RunTime:0.001173s ]
+[ error ] 获取预订单失败

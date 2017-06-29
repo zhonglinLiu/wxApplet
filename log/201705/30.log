@@ -1,0 +1,31 @@
+---------------------------------------------------------------
+[ 2017-05-30T02:02:36+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/user/get_token
+[ info ] zerg.com/api/v1/user/get_token [运行时间：0.558241s][吞吐率：1.79req/s] [内存消耗：4,759.13kb] [文件加载：56]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020737s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_user` [ RunTime:0.055325s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_user` WHERE  `openid` = 123456 LIMIT 1 [ RunTime:0.001674s ]
+[ sql ] [ SQL ] INSERT INTO `rest_user` (`openid`) VALUES (123456) [ RunTime:0.074161s ]
+---------------------------------------------------------------
+[ 2017-05-30T02:16:59+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.625490s][吞吐率：1.60req/s] [内存消耗：5,038.05kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042620s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_banner` [ RunTime:0.055239s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002803s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_banner_item` [ RunTime:0.051461s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001780s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001860s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_img` [ RunTime:0.049667s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_img` WHERE  `id` IN (1,2,3,4) [ RunTime:0.002300s ]
+---------------------------------------------------------------
+[ 2017-05-30T11:21:01+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/user/get_token
+[ info ] zerg.com/api/v1/user/get_token [运行时间：0.855841s][吞吐率：1.17req/s] [内存消耗：4,759.37kb] [文件加载：56]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.133028s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_user` [ RunTime:0.183687s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_user` WHERE  `openid` = 123456 LIMIT 1 [ RunTime:0.029701s ]
+[ sql ] [ SQL ] INSERT INTO `rest_user` (`openid`) VALUES (123456) [ RunTime:0.099732s ]
+---------------------------------------------------------------
+[ 2017-05-30T11:41:46+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/user/get_token
+[ info ] zerg.com/api/v1/user/get_token [运行时间：0.466353s][吞吐率：2.14req/s] [内存消耗：4,761.73kb] [文件加载：56]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002693s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_user` [ RunTime:0.072569s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_user` WHERE  `openid` = 12389456 LIMIT 1 [ RunTime:0.001881s ]

@@ -1,0 +1,10 @@
+---------------------------------------------------------------
+[ 2017-05-25T20:15:25+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.215318s][吞吐率：4.64req/s] [内存消耗：2,364.85kb] [文件加载：38]
+[ error ] [0]testError[F:\study\zerg\application\api\controller\v1\Banner.php:10]
+[ error ] testError
+---------------------------------------------------------------
+[ 2017-05-25T23:17:46+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/-1
+[ info ] zerg.com/api/v1/banner/-1 [运行时间：0.274506s][吞吐率：3.64req/s] [内存消耗：2,711.77kb] [文件加载：41]
+[ error ] [0]id必须是正整数[F:\study\zerg\thinkphp\helper.php:59]
+[ error ] id必须是正整数

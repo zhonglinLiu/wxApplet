@@ -1,0 +1,168 @@
+---------------------------------------------------------------
+[ 2017-05-29T11:57:19+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/user/get_token
+[ info ] zerg.com/api/v1/user/get_token [运行时间：0.668254s][吞吐率：1.50req/s] [内存消耗：4,732.56kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023379s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_user` [ RunTime:0.084094s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_user` WHERE  `openid` = 123456 LIMIT 1 [ RunTime:0.001750s ]
+[ sql ] [ SQL ] INSERT INTO `rest_user` (`openid`) VALUES (123456) [ RunTime:0.119797s ]
+---------------------------------------------------------------
+[ 2017-05-29T12:05:53+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/user/get_token
+[ error ] [1]invalid code, hints: [ req_id: inX22a0754s161 ]
+[ error ] invalid code, hints: [ req_id: inX22a0754s161 ]
+---------------------------------------------------------------
+[ 2017-05-29T16:28:58+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/banner/1
+[ info ] zerg.com/api/v1/banner/1 [运行时间：0.841640s][吞吐率：1.19req/s] [内存消耗：5,032.25kb] [文件加载：59]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031961s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_banner` [ RunTime:0.056389s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_banner` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.045431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_banner_item` [ RunTime:0.062193s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_banner_item` WHERE  `banner_id` = 1 [ RunTime:0.037475s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_banner_item` WHERE  `banner_id` = 1 [ RunTime:0.001880s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_img` [ RunTime:0.054501s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_img` WHERE  `id` IN (1,2,3,4) [ RunTime:0.056027s ]
+---------------------------------------------------------------
+[ 2017-05-29T16:29:25+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/recent
+[ info ] zerg.com/api/v1/products/recent [运行时间：0.525964s][吞吐率：1.90req/s] [内存消耗：4,693.02kb] [文件加载：53]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028688s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.082192s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` ORDER BY `create_time`  desc LIMIT 15 [ RunTime:0.012499s ]
+---------------------------------------------------------------
+[ 2017-05-29T16:29:43+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/recent
+[ info ] zerg.com/api/v1/products/recent [运行时间：0.455170s][吞吐率：2.20req/s] [内存消耗：4,693.02kb] [文件加载：53]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033236s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.056373s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` ORDER BY `create_time`  desc LIMIT 15 [ RunTime:0.002372s ]
+---------------------------------------------------------------
+[ 2017-05-29T16:30:21+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.563963s][吞吐率：1.77req/s] [内存消耗：4,848.16kb] [文件加载：56]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042695s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.055220s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.001850s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.053466s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.001868s ]
+---------------------------------------------------------------
+[ 2017-05-29T16:34:51+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.567291s][吞吐率：1.76req/s] [内存消耗：4,849.84kb] [文件加载：56]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.053737s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.054543s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.002172s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.053673s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.001753s ]
+---------------------------------------------------------------
+[ 2017-05-29T16:41:09+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.618714s][吞吐率：1.62req/s] [内存消耗：4,849.84kb] [文件加载：56]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031018s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.057609s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.002084s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.054320s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.001753s ]
+---------------------------------------------------------------
+[ 2017-05-29T16:48:41+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.690769s][吞吐率：1.45req/s] [内存消耗：4,912.55kb] [文件加载：57]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031124s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.077730s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.002911s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.059320s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.002428s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.057412s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.001933s ]
+---------------------------------------------------------------
+[ 2017-05-29T16:51:35+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.613233s][吞吐率：1.63req/s] [内存消耗：4,912.55kb] [文件加载：57]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043749s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.058664s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.001954s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.055626s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.001973s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.056767s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.001691s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:12:07+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.619288s][吞吐率：1.61req/s] [内存消耗：4,913.20kb] [文件加载：57]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045405s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.060189s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.001940s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.053808s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.001721s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.053154s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.001668s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:28:05+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.786749s][吞吐率：1.27req/s] [内存消耗：4,913.20kb] [文件加载：57]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.073069s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.159100s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.001918s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.060140s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.001860s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.057362s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.002066s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:28:07+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.676176s][吞吐率：1.48req/s] [内存消耗：4,913.20kb] [文件加载：57]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046391s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.058959s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.002466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.091837s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 [ RunTime:0.001661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.053785s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.001900s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:38:01+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.696123s][吞吐率：1.44req/s] [内存消耗：5,105.88kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036805s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.053150s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.002180s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.053965s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 ORDER BY `order`  desc [ RunTime:0.001800s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_img` [ RunTime:0.054255s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_img` WHERE  `id` IN (1,5,6,7) [ RunTime:0.001912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.051741s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.001496s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:45:43+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.715816s][吞吐率：1.40req/s] [内存消耗：5,106.05kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048848s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.055331s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.002549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.054449s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 ORDER BY `order`  desc [ RunTime:0.002711s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_img` [ RunTime:0.052343s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_img` WHERE  `id` IN (1,5,6,7) [ RunTime:0.001728s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.053863s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.002186s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:48:01+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.729201s][吞吐率：1.37req/s] [内存消耗：5,106.89kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037859s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.055392s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.001946s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.061560s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 ORDER BY `order`  desc [ RunTime:0.001884s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_img` [ RunTime:0.061137s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_img` WHERE  `id` IN (1,5,6,7) [ RunTime:0.001654s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.056142s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.001685s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:48:05+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/3
+[ info ] zerg.com/api/v1/products/3 [运行时间：0.674204s][吞吐率：1.48req/s] [内存消耗：5,106.89kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042428s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.056062s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` LIMIT 1 [ RunTime:0.001761s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.057826s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 ORDER BY `order`  desc [ RunTime:0.001543s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_img` [ RunTime:0.054741s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_img` WHERE  `id` IN (1,5,6,7) [ RunTime:0.001638s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.050391s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.001538s ]
+---------------------------------------------------------------
+[ 2017-05-29T17:48:48+08:00 ] 127.0.0.11 127.0.0.1 GET /api/v1/products/1
+[ info ] zerg.com/api/v1/products/1 [运行时间：0.819449s][吞吐率：1.22req/s] [内存消耗：5,107.32kb] [文件加载：60]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032962s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.052628s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002238s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_img` [ RunTime:0.085447s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_img` WHERE  `product_id` = 1 ORDER BY `order`  desc [ RunTime:0.001582s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_img` [ RunTime:0.110976s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_img` WHERE  `id` IN (1,5,6,7) [ RunTime:0.001897s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product_property` [ RunTime:0.063382s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product_property` WHERE  `product_id` = 1 [ RunTime:0.027168s ]

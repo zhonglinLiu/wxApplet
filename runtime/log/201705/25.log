@@ -1,0 +1,1527 @@
+---------------------------------------------------------------
+[ 2017-05-25T01:35:01+08:00 ] 127.0.0.11 127.0.0.1 GET /
+[ info ] tp5.xiao.com/ [运行时间：0.336700s][吞吐率：2.97req/s] [内存消耗：1,759.85kb] [文件加载：28]
+[ info ] [ LANG ] F:\study\tp5xiao\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.xiao.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\study\tp5xiao\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T01:52:35+08:00 ] 127.0.0.11 127.0.0.1 GET /hello
+[ info ] tp5.xiao.com/hello [运行时间：0.253733s][吞吐率：3.94req/s] [内存消耗：1,837.43kb] [文件加载：30]
+[ info ] [ LANG ] F:\study\tp5xiao\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hello',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.xiao.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=1531028480; pgv_si=s6827534336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T01:54:25+08:00 ] 127.0.0.11 127.0.0.1 GET /h
+[ info ] tp5.xiao.com/h [运行时间：0.166988s][吞吐率：5.99req/s] [内存消耗：1,837.48kb] [文件加载：30]
+[ info ] [ LANG ] F:\study\tp5xiao\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'h',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.xiao.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=1531028480; pgv_si=s6827534336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T01:54:38+08:00 ] 127.0.0.11 127.0.0.1 GET /name
+[ info ] tp5.xiao.com/name [运行时间：0.160603s][吞吐率：6.23req/s] [内存消耗：1,837.48kb] [文件加载：30]
+[ info ] [ LANG ] F:\study\tp5xiao\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'name',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.xiao.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=1531028480; pgv_si=s6827534336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T01:57:13+08:00 ] 127.0.0.11 127.0.0.1 GET /hello/5
+[ info ] tp5.xiao.com/hello/5 [运行时间：0.191805s][吞吐率：5.21req/s] [内存消耗：1,843.86kb] [文件加载：31]
+[ info ] [ LANG ] F:\study\tp5xiao\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'index',
+    2 => 'hello',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.xiao.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=1531028480; pgv_si=s6827534336',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T01:58:25+08:00 ] 127.0.0.11 127.0.0.1 GET /hello/5
+[ info ] tp5.xiao.com/hello/5 [运行时间：0.170390s][吞吐率：5.87req/s] [内存消耗：1,764.80kb] [文件加载：28]
+[ info ] [ LANG ] F:\study\tp5xiao\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => NULL,
+    1 => 'index',
+    2 => 'hello',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.xiao.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=1531028480; pgv_si=s6827534336',
+)
+[ info ] [ PARAM ] array (
+  'id' => '5',
+)
+[ info ] [ RUN ] app\index\controller\Index->hello[ F:\study\tp5xiao\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T13:30:16+08:00 ] 127.0.0.11 127.0.0.1 GET /
+[ info ] zerg.com/ [运行时间：0.449648s][吞吐率：2.22req/s] [内存消耗：1,760.28kb] [文件加载：28]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\study\zerg\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T14:03:28+08:00 ] 127.0.0.11 127.0.0.1 GET /banner
+[ info ] zerg.com/banner [运行时间：0.290071s][吞吐率：3.45req/s] [内存消耗：1,831.21kb] [文件加载：30]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'banner',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '98abb4a6-91be-f3a6-8f06-7693d54c3319',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T14:03:56+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/2
+[ info ] zerg.com/banner/2 [运行时间：0.215872s][吞吐率：4.63req/s] [内存消耗：1,821.68kb] [文件加载：29]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 'api\\v1.Banner\\getBanners',
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'ca9663db-7b66-bada-2571-442d9265e6a8',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]Invalid method name api\v1.Banner\getBanners[F:\study\zerg\thinkphp\library\think\App.php:191]
+---------------------------------------------------------------
+[ 2017-05-25T14:04:53+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/2
+[ info ] zerg.com/banner/2 [运行时间：0.144007s][吞吐率：6.94req/s] [内存消耗：1,821.74kb] [文件加载：29]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 'api\\v1\\Banner\\getBanners',
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'cac445e4-a8fc-c28a-e6b6-1922fc757d60',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]Invalid method name api\v1\Banner\getBanners[F:\study\zerg\thinkphp\library\think\App.php:191]
+---------------------------------------------------------------
+[ 2017-05-25T14:05:23+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/2
+[ info ] zerg.com/banner/2 [运行时间：0.203257s][吞吐率：4.92req/s] [内存消耗：2,261.74kb] [文件加载：34]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanners',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'e43903cf-07fe-4577-cbf0-ea7988deb028',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanners[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T14:06:03+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/
+[ info ] zerg.com/banner/ [运行时间：0.172639s][吞吐率：5.79req/s] [内存消耗：1,831.29kb] [文件加载：30]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'banner',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'e3a469a9-5ee6-1301-41f9-ab97d57a6837',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T14:21:14+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/
+[ info ] zerg.com/banner/ [运行时间：0.168783s][吞吐率：5.92req/s] [内存消耗：1,831.37kb] [文件加载：30]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'banner',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '45bbc7c0-40bd-f1ac-4f17-52300c74e57e',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T14:21:17+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.162230s][吞吐率：6.16req/s] [内存消耗：2,261.69kb] [文件加载：34]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '2e6fe1b9-2ae8-cc35-8f52-616be9dac5c6',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T14:53:09+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.346436s][吞吐率：2.89req/s] [内存消耗：1,867.67kb] [文件加载：31]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '66cd211e-29bc-89dd-3876-3f81d9144705',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'if' (T_IF)[F:\study\zerg\application\api\controller\v1\Banner.php:11]
+---------------------------------------------------------------
+[ 2017-05-25T14:53:30+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.258274s][吞吐率：3.87req/s] [内存消耗：2,356.28kb] [文件加载：38]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'f74ca226-2b11-ecd5-5b7b-c81e37531d53',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Array to string conversion[F:\study\zerg\thinkphp\library\think\Loader.php:441]
+---------------------------------------------------------------
+[ 2017-05-25T14:54:53+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.189840s][吞吐率：5.27req/s] [内存消耗：2,356.28kb] [文件加载：38]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'b1d0f96e-3769-a55f-9db5-5ed83783b2b3',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Array to string conversion[F:\study\zerg\thinkphp\library\think\Loader.php:441]
+---------------------------------------------------------------
+[ 2017-05-25T14:55:26+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.198213s][吞吐率：5.05req/s] [内存消耗：1,867.67kb] [文件加载：31]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '58c4cee0-6142-b17e-1761-647c745af218',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'if' (T_IF)[F:\study\zerg\application\api\controller\v1\Banner.php:11]
+---------------------------------------------------------------
+[ 2017-05-25T14:55:35+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.230597s][吞吐率：4.34req/s] [内存消耗：2,675.69kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '75e45118-fa2a-f08b-b7e5-2cf2c2a9b7ce',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组下标: 0[F:\study\zerg\thinkphp\library\think\Validate.php:281]
+---------------------------------------------------------------
+[ 2017-05-25T14:55:55+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.191073s][吞吐率：5.23req/s] [内存消耗：2,675.69kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '7b4fbb80-42a2-dac5-d0f4-e55ca0317aaf',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组下标: 0[F:\study\zerg\thinkphp\library\think\Validate.php:281]
+---------------------------------------------------------------
+[ 2017-05-25T14:56:08+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.191855s][吞吐率：5.21req/s] [内存消耗：2,675.69kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '646d31e8-b0e8-253c-60e4-7513e1c668dc',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组下标: 0[F:\study\zerg\thinkphp\library\think\Validate.php:281]
+---------------------------------------------------------------
+[ 2017-05-25T14:56:54+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.182486s][吞吐率：5.48req/s] [内存消耗：2,675.55kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '70fae8ed-8a17-5809-e670-a770ce900991',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组下标: 0[F:\study\zerg\thinkphp\library\think\Validate.php:281]
+---------------------------------------------------------------
+[ 2017-05-25T14:57:16+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.200061s][吞吐率：5.00req/s] [内存消耗：2,677.50kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'ce0f0a9d-f6b7-d9ba-60a0-fa9cce4b9ca3',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]call_user_func_array() expects parameter 1 to be a valid callback, class 'app\api\validate\Banner' does not have a method 'app\api\behavior\Rules'[F:\study\zerg\thinkphp\library\think\Validate.php:391]
+---------------------------------------------------------------
+[ 2017-05-25T14:57:59+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.232027s][吞吐率：4.31req/s] [内存消耗：2,677.62kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '95fa49ab-02c5-55d2-7320-aa05eb750532',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]call_user_func_array() expects parameter 1 to be a valid callback, class 'app\api\validate\Banner' does not have a method '\app\api\behavior\Rules'[F:\study\zerg\thinkphp\library\think\Validate.php:391]
+---------------------------------------------------------------
+[ 2017-05-25T15:00:25+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.243872s][吞吐率：4.10req/s] [内存消耗：2,677.62kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '40ff3657-0e8c-980a-bb41-b2249a68cf3e',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]call_user_func_array() expects parameter 1 to be a valid callback, class 'app\api\validate\Banner' does not have a method '\app\api\behavior\Rules'[F:\study\zerg\thinkphp\library\think\Validate.php:391]
+---------------------------------------------------------------
+[ 2017-05-25T15:03:29+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.259878s][吞吐率：3.85req/s] [内存消耗：2,494.72kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '27ec9819-3efd-1722-3553-1097cdbf8a97',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:03:49+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.238491s][吞吐率：4.19req/s] [内存消耗：2,495.64kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'ebfe728a-47e1-8635-3833-36cd63fd2c90',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:04:23+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.155341s][吞吐率：6.44req/s] [内存消耗：2,495.27kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '818f719a-69a8-1aee-4639-904f191af0e1',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:04:42+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.167501s][吞吐率：5.97req/s] [内存消耗：2,495.77kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '859a72c2-ae12-63de-7bc0-c9ec203b39cc',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:04:56+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.162473s][吞吐率：6.15req/s] [内存消耗：2,495.77kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '143f70c9-0498-de8b-a555-af446b4c048e',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:05:38+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.201924s][吞吐率：4.95req/s] [内存消耗：2,637.76kb] [文件加载：38]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'babc6257-c5eb-e717-5fbb-512161abc8df',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ BEHAVIOR ] Run \app\api\behavior\Rules::IdMustBePostiveInt @ [ RunTime:0.004826s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:05:54+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.170007s][吞吐率：5.88req/s] [内存消耗：2,638.05kb] [文件加载：38]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '2a498fa6-74e2-fed0-2ccd-913cf2e148e6',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ BEHAVIOR ] Run \app\api\behavior\Rules::IdMustBePostiveInt @ [ RunTime:0.002771s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:52:42+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.252880s][吞吐率：3.95req/s] [内存消耗：2,657.45kb] [文件加载：39]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'f360b810-c3d9-0a11-04e5-40ce57fb4b53',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]类不存在:app\common\validate\IdMustBePostiveInt[F:\study\zerg\thinkphp\library\think\Loader.php:463]
+---------------------------------------------------------------
+[ 2017-05-25T15:53:45+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.254447s][吞吐率：3.93req/s] [内存消耗：2,581.35kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'd89f7f67-21c6-1d54-1483-ca97898fdcd3',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:54:25+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.169182s][吞吐率：5.91req/s] [内存消耗：2,581.89kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '0daf4ee8-2ffd-d7da-d593-497664e79392',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:55:01+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.180592s][吞吐率：5.54req/s] [内存消耗：2,581.99kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '6b231812-3ca8-0050-1bb7-53fd11f41f7a',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:55:32+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.168719s][吞吐率：5.93req/s] [内存消耗：2,581.48kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '689c1d9f-afc4-ec3a-ba64-9a4e3d5197ce',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:56:06+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.152429s][吞吐率：6.56req/s] [内存消耗：2,437.81kb] [文件加载：34]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '28b842e8-6d3e-58b3-9d99-f8b031732af0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:56:27+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.161922s][吞吐率：6.18req/s] [内存消耗：2,580.52kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '9f4c821b-6507-08bd-c593-ab9b49a8baff',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T15:59:11+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.193863s][吞吐率：5.16req/s] [内存消耗：2,580.23kb] [文件加载：36]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '82c99246-d479-e410-cfb5-950ff776f442',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T16:12:23+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.301276s][吞吐率：3.32req/s] [内存消耗：2,703.04kb] [文件加载：41]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'f2387f21-8cc7-c840-7a57-0e6ad023c6c6',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: validate[F:\study\zerg\application\api\controller\v1\Banner.php:9]
+---------------------------------------------------------------
+[ 2017-05-25T16:12:46+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/1
+[ info ] zerg.com/banner/1 [运行时间：0.162363s][吞吐率：6.16req/s] [内存消耗：2,607.80kb] [文件加载：37]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '86dec49e-e882-0544-845c-f35ff4332d98',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2017-05-25T16:12:53+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.183031s][吞吐率：5.46req/s] [内存消耗：2,689.77kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '13bb5689-100a-68e5-0da9-6209d57ac3ab',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]id必须是正整数[F:\study\zerg\thinkphp\helper.php:59]
+---------------------------------------------------------------
+[ 2017-05-25T16:50:22+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.254458s][吞吐率：3.93req/s] [内存消耗：2,689.77kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'd21f107f-76a8-bbe6-7e6e-efc4f9a226f7',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]id必须是正整数[F:\study\zerg\thinkphp\helper.php:59]
+---------------------------------------------------------------
+[ 2017-05-25T18:11:02+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.209102s][吞吐率：4.78req/s] [内存消耗：1,867.41kb] [文件加载：31]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '2cca19da-b2d8-2ce5-3bbc-e5a6bfc57fd3',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected 'as' (T_AS)[F:\study\zerg\application\api\controller\v1\Banner.php:9]
+---------------------------------------------------------------
+[ 2017-05-25T18:15:30+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.213797s][吞吐率：4.68req/s] [内存消耗：2,350.93kb] [文件加载：38]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'd05bc2a6-e8a4-cd1a-3ba5-46babb939a3b',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Error Processing Request[F:\study\zerg\application\api\controller\v1\Banner.php:8]
+---------------------------------------------------------------
+[ 2017-05-25T18:17:38+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.180714s][吞吐率：5.53req/s] [内存消耗：2,221.71kb] [文件加载：35]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'df416e2f-b3f6-3fcc-8596-4e12230b219f',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Error Processing Request[F:\study\zerg\application\api\controller\v1\Banner.php:8]
+---------------------------------------------------------------
+[ 2017-05-25T18:17:52+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.147633s][吞吐率：6.77req/s] [内存消耗：2,221.85kb] [文件加载：35]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'a2868322-5582-bbb4-9219-b417be456732',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Error Processing Request[F:\study\zerg\application\api\controller\v1\Banner.php:8]
+---------------------------------------------------------------
+[ 2017-05-25T18:19:00+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.204012s][吞吐率：4.90req/s] [内存消耗：2,358.02kb] [文件加载：38]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => 'fd2ed1a0-0aad-774e-2cf0-f35c0d5693a0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Error Processing Request[F:\study\zerg\application\api\controller\v1\Banner.php:8]
+---------------------------------------------------------------
+[ 2017-05-25T18:48:01+08:00 ] 127.0.0.11 127.0.0.1 GET /banner/-1
+[ info ] zerg.com/banner/-1 [运行时间：0.200540s][吞吐率：4.99req/s] [内存消耗：2,377.67kb] [文件加载：40]
+[ info ] [ LANG ] F:\study\zerg\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v1.Banner',
+    2 => 'getBanner',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'zerg.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'content-type' => 'application/json',
+  'authorization' => 'Basic bGl1OjEyMzQ1Ng==',
+  'postman-token' => '71c756b5-985e-a44d-9248-e3e1966079ab',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '-1',
+)
+[ info ] [ RUN ] app\api\controller\v1\Banner->getBanner[ F:\study\zerg\application\api\controller\v1\Banner.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [400][F:\study\zerg\application\api\controller\v1\Banner.php:10]

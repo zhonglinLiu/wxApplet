@@ -1,0 +1,18 @@
+---------------------------------------------------------------
+[ 2017-06-01T19:45:58+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：0.353113s][吞吐率：2.83req/s] [内存消耗：4,741.30kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002597s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.056722s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` WHERE  `id` IN (1) [ RunTime:0.001898s ]
+---------------------------------------------------------------
+[ 2017-06-01T19:46:20+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：0.312811s][吞吐率：3.20req/s] [内存消耗：4,742.04kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002477s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.054533s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` WHERE  `id` IN (1) [ RunTime:0.001958s ]
+---------------------------------------------------------------
+[ 2017-06-01T19:46:38+08:00 ] 127.0.0.11 127.0.0.1 POST /api/v1/order
+[ info ] zerg.com/api/v1/order [运行时间：0.330040s][吞吐率：3.03req/s] [内存消耗：4,741.88kb] [文件加载：54]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002461s ] mysql:dbname=applet;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `rest_product` [ RunTime:0.079572s ]
+[ sql ] [ SQL ] SELECT * FROM `rest_product` WHERE  `id` IN (1) [ RunTime:0.001978s ]
