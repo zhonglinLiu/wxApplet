@@ -38,9 +38,13 @@ Route::get('api/:version/category/all','api/:version.Category/getAllCates');
 //获取token令牌
 //api/v1/user/get_token
 Route::post('api/:version/user/get_token','api/:version.User/getToken');
+//验证token是否过期
+Route::post('api/:version/user/validToken','api/:version.User/validToken');
 
 //创建或改变地址
 Route::post('api/:version/address','api/:version.UserAddress/changeOrCreate');
+//获取地址
+Route::get('api/:version/address','api/:version.UserAddress/getAddress');
 
 //提交订单
 /*$products = [

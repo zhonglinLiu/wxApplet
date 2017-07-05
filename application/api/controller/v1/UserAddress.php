@@ -37,4 +37,16 @@ class UserAddress extends Base{
 		throw new BaseException('success',200,10001);
 	}
 
+	public function getAddress(){
+		$uid = Token::instance()->getCurrentUid();
+		if(!$uid){
+			throw new TokenException;
+		}
+		if(!model('User')->userExists($uid)){
+			throw new BaseException('该用户不存在',400);
+		}
+		$address = model('UserAddress')->where(['user_id'=>$uid])->find()->hidden(['delete_time','update_time','user_id']);
+		return $address;
+	}
+
 }

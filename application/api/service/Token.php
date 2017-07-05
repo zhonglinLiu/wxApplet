@@ -32,6 +32,8 @@ class Token{
 		if(!$token){
 			throw new TokenException;
 		}
+		if(!Cache::has($token))
+			throw new TokenException;
 		$vars = Cache::get($token);
 		if(!$vars){
 			throw new TokenException;
