@@ -15,8 +15,6 @@ class User extends Controller{
 	}
 
 	public function validToken($token){
-		echo $token;
-		exit;
 		if(!$token){
 			throw new BannerException('token不能为空',400,40001);
 		}

@@ -184,6 +184,7 @@ class Order{
 			'name'=>$product['name'],
 			'productPrice'=>$ocount * $product['price'],
 			'count'=>$ocount,
+			'main_img_url'=>$product['main_img_url'],
 		];
 		$pStatusArray['hasStock'] = $product['stock'] >= $ocount ? true : false;
 		return $pStatusArray;

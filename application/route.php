@@ -47,14 +47,22 @@ Route::post('api/:version/address','api/:version.UserAddress/changeOrCreate');
 Route::get('api/:version/address','api/:version.UserAddress/getAddress');
 
 //提交订单
-/*$products = [
-	'product_id'=>1,
-	'id'=>3
-];*/
+/*
+{
+	products:{
+		product_id:1.
+		count:2
+	},
+	...
+}
+
+ */
 Route::post('api/:version/order','api/:version.Order/checkOrder');
 
 //api/v1/user_orders?page=1&size=10
 Route::post('api/:version/user_orders','api/:version.Order/getOrders');
+//api/v1/user_order_detail?id=1
+Route::get('api/:version/user_order_detail','api/:version.Order/getDetail');
 
 //预订单
 //$id = order_id
