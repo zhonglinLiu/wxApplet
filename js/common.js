@@ -1,5 +1,5 @@
 window.base={
-    g_restUrl:'REST API Base URL',
+    g_restUrl:'http://zerg.com/api/v1/',
 
     getData:function(params){
         if(!params.type){

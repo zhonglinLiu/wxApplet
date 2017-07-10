@@ -13,7 +13,7 @@ $(function(){
         var params={
             url:'token/app',
             type:'post',
-            data:{ac:$userName.val(),se:$pwd.val()},
+            data:{username:$userName.val(),password:$pwd.val()},
             sCallback:function(res){
                 if(res){
                     window.base.setLocalStorage('token',res.token);
