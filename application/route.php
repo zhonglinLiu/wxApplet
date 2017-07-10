@@ -41,6 +41,8 @@ Route::post('api/:version/user/get_token','api/:version.User/getToken');
 //验证token是否过期
 Route::post('api/:version/user/validToken','api/:version.User/validToken');
 
+Route::post('api/:version/token/app','api/:version.ThirdApp/getToken');
+
 //创建或改变地址
 Route::post('api/:version/address','api/:version.UserAddress/changeOrCreate');
 //获取地址
