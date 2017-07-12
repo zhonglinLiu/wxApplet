@@ -62,9 +62,12 @@ Route::get('api/:version/address','api/:version.UserAddress/getAddress');
 Route::post('api/:version/order','api/:version.Order/checkOrder');
 
 //api/v1/user_orders?page=1&size=10
-Route::post('api/:version/user_orders','api/:version.Order/getOrders');
+Route::get('api/:version/user_orders','api/:version.Order/getOrders');
 //api/v1/user_order_detail?id=1
 Route::get('api/:version/user_order_detail','api/:version.Order/getDetail');
+//发货
+Route::put('api/:version/order/delivery','api/:version.Order/deliver');
+
 
 //预订单
 //$id = order_id

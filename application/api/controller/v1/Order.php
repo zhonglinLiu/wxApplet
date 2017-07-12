@@ -8,6 +8,7 @@ use app\api\validate\PagingParams;
 use app\api\service\Token;
 use app\api\validate\IdMustBePostiveInt;
 use app\lib\exception\BaseException;
+use think\Exception;
 class Order extends Base{
 	//用户在下单时会把商品的详细信息发送到后台
 	//后台检查商品是否有货
@@ -41,7 +42,7 @@ class Order extends Base{
 	 * @return [type]        [description]
 	 * api/v1/user_orders?page=1&size=10
 	 */
-	public function getOrders($page=1,$size=10){
+	public function getOrders($page=1,$size=5){
 		(new PagingParams)->goCheck();
 		$uid = Token::instance()->getCurrentTokenVal('uid');
 		$pageObj = (new OrderModel)->getOrdersByPage($page,$size,$uid);
@@ -67,6 +68,23 @@ class Order extends Base{
 			throw new BaseException('订单不存在',404,60003);
 		}
 		return $order->hidden(['prepay_id']);
+	}
+
+	/**
+	 * [Deliver 发货通知]
+	 * @param [type] $id [order表id]
+	 */
+	public function deliver($id){
+		(new IdMustBePostiveInt)->goCheck();
+		$order = OrderModel::get($id);
+		if(!$order){
+			throw new BaseException('订单不存在',404,60003);
+		}
+		$orderServer = new OrderService;
+		if($orderServer->deliver($order)){
+			throw new BaseException('发送成功',200,20000);
+		}
+		throw new BaseException('获取AccessToken失败',500,5002);
 	}
 
 

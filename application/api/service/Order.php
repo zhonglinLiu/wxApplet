@@ -4,7 +4,9 @@ use app\api\model\Product;
 use app\api\model\Order as OrderModel;
 use app\api\model\OrderProduct;
 use app\lib\exception\BaseException;
+use app\api\service\DeliverMessage;
 use think\Db;
+use app\api\service\AccessToken;
 class Order{
 	protected static $ins = null;
 	//查询出来的商品
@@ -200,5 +202,20 @@ class Order{
 		$this->products = $this->getProducts();
 		$status = $this->getOrderStatus();
 		return $status;
+	}
+
+	/**
+	 * [deliver 发货]
+	 * @param  [type] $order [description]
+	 * @return [type]        [description]
+	 */
+	public function deliver($order){
+		$token = (new AccessToken)->get();
+		if(!$token){
+			return false;
+		}
+		$deliver = new DeliverMessage($order,$token);
+		$deliver->sendMessage();
+		
 	}
 } 

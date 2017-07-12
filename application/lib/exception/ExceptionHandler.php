@@ -28,7 +28,7 @@ class ExceptionHandler extends Handle{
 
         $rel = [
         	'msg'=>$this->msg,
-        	'errorCode'=>$this->errorCode,
+        	'code'=>$this->errorCode,
         	'request_url'=>request()->url(),
         ];
 
