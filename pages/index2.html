@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*.ttlsa.com">
+    <title>零食商贩－订单列表</title>
+    <link rel="shortcut icon" href="../favicon.ico"/>
+    <link href="../css/index/index.css" type="text/css" rel="stylesheet">
+    <link href="../css/index/iconfont/iconfont.css" type="text/css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/home/home.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/category/categoryProductt.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/product/product.css">
+    <link rel="stylesheet" type="text/css" href="../js/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../css/product/add.css">
+</head>
+<body>
+    <div class="banner-wrapper">
+        <div class="logo">
+            <img src="../imgs/logo.png">
+            <div class="logo-word">
+                <div>零食商贩</div>
+                <div>Snack Petty Vendor</div>
+            </div>
+        </div>
+        <div class="left-box">
+            <a class="register" id="login-out" title="退出">退出</a>
+        </div>
+    </div>
+    <div class="desktop-all-box">
+        <div class="desktop item-wrapper">
+            <div class="desktop-menu">
+                <ul>
+                    <li class="leftbar-item">
+                        <a class="active">
+                            <i class="iconfont icon-list"></i>
+                            <span>订单列表</span>
+                        </a>
+                        <a class="">
+                            <i class="iconfont icon-home" attr-name="homeModel"></i>
+                            <span>主页</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="desktop-main">
+                <div class="add-box" >
+
+                    <form class="layui-form" action="">
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">商品名称</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="请输入商品名称" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                        
+                     <div class="layui-form-item">
+                        <label class="layui-form-label">商品价格</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="请输入商品价格" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+                        
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">商品库存</label>
+                        <div class="layui-input-block">
+                          <input type="text" name="title" required  lay-verify="required" placeholder="请输入商品库存" autocomplete="off" class="layui-input">
+                        </div>
+                      </div>
+
+                      <select name="city" lay-verify="">
+                      <option value="">请选择一个城市</option>
+                      <option value="010">北京</option>
+                      <option value="021">上海</option>
+                      <option value="0571">杭州</option>
+                    </select> 
+                                            
+                     
+                      
+                    </form>
+
+                </div>
+                <div class="bar-main">
+                    <div class="product-tool">
+                        <a href="#/product/add" ><i class="layui-icon add-icon " >&#xe61f;</i></a>
+                    </div>
+                   <div class="search-box" >
+                    <div class="prompt" >
+                        以商品id查找 id:id,
+                        以商品名称查找 name:name,
+                        以创建时间倒序排序 create_time:<,
+                        以创建时间正序排序create_time:>
+                    </div>
+                    <i class="layui-icon help-icon " >&#xe607;</i>
+                    <i class="layui-icon search-icon " >&#xe615;</i>
+                     <input type="text" name="search">
+                   </div>
+                </div>
+                    
+                <div class="product-box">
+                    <table cellspacing="0" ng-show="docArr.length>0">
+                        <thead>
+                            <tr class="table-header">
+                                <td>ID</td>
+                                <td>商品图片</td>
+                                <td>商品名称</td>
+                                <td>商品价格</td>
+                                <td>商品库存</td>
+                                <td>创建时间</td>
+                                <td>更新时间</td>
+                                <td>操作</td>
+                            </tr>
+                        </thead>
+                        <tbody id="product-table">
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="paging"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="global-tips">
+        <p></p>
+    </div>
+</body>
+<script src="../js/common.js" type="application/javascript"></script>
+<script src="../js/jquery-1.8.2.min.js" type="application/javascript"></script>
+<!-- <script src="../js/index.js" type="application/javascript"></script> -->
+<script type="text/javascript" src="../js/layui/layui.js" ></script>
+<script type="text/javascript" src="../js/productAdd.js"></script>
+<script type="text/javascript">
+ proaddModel.init();
+</script>
+<script>
+//Demo
+
+ 
+</script>
+</html>

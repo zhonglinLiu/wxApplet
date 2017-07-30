@@ -1,0 +1,43 @@
+ul.home-box{
+	width:800px;
+	height: 100%;
+	margin:20px auto;
+}
+ul.home-box li{
+	border:1px solid #3D6BA4;
+	border-radius: 6px;
+}
+
+ul.home-box li:hover{
+	cursor: pointer;
+	box-shadow: 4px 4px 6px rgba(0,0,0,0.1);
+}
+ul.home-box li:nth-child(odd){
+	float: left;
+	width:350px;
+	height: 100px;
+	margin-bottom: 20px;
+	clear:both;
+}
+ul.home-box li:nth-child(even){
+	float: right;
+	width:350px;
+	height: 100px;
+}
+
+ul.home-box li div{
+	width:50%;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	float: left;
+}
+ul.home-box li div.text{
+	color: #A89EAD;
+	font-weight: lighter;
+}
+
+ ul.home-box li div i{
+	font-size: 40px;
+	font-weight: lighter;
+} 

@@ -1,0 +1,36 @@
+.add-box{
+
+}
+.category-box{
+	margin-left:110px;
+	margin-bottom: 10px;
+	width:670px;
+}
+.upload-box{
+	margin-left:110px;
+}
+.add-product-form{
+	margin:10px 10px;
+}
+.submit-btn{
+	margin: 0 10px 10px 0;
+	float: right;
+}
+#uploader .placeholder {
+	height: 100px;
+	min-height: 100px;
+    padding-top: 20px;
+    background: url('/js/upload/image.png') center 30px no-repeat
+}
+#filePicker{
+	float: right;
+}
+
+#uploader .placeholder .webuploader-pick {
+	width: 80px;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 40px;
+}

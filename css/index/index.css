@@ -10,7 +10,9 @@
 * {
   /*禁用手机浏览器的用户选择功能 */
   -moz-user-select: none;
-  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+  /*font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;*/
+  font-family:"Open Sans","DejaVu Sans",sans-serif;
+  list-style-type:none;
   -webkit-overflow-scrolling: touch;
 }
 a,
@@ -26,6 +28,7 @@ a:focus {
   outline: none;
   -moz-outline: none;
 }
+
 input[type="text"],
 input[type="password"],
 textarea {
@@ -588,6 +591,8 @@ body {
 }
 .desktop .desktop-menu ul li a span {
   color: #555555;
+  display: inline-block;
+  width:72px;
 }
 .desktop .desktop-menu ul li a i {
   color: #a09e9e;
@@ -628,7 +633,7 @@ body {
   color: #212121;
   font-size: 12px;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
 }
 .desktop .order-box table tbody tr {
   height: 40px;

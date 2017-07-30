@@ -19,7 +19,10 @@ window.base={
                 params.sCallback && params.sCallback(res);
             },
             error:function(res){
-
+                var respose = JSON.parse(res.responseText);
+                if(respose.code==40001){
+                    window.location.href="http://zergcms.com/pages/login.html"
+                }
                 params.eCallback && params.eCallback(res);
             }
         });
@@ -43,6 +46,7 @@ window.base={
             }
             else{
                 this.deleteLocalStorage('token');
+                window.location.href="http://zergcms.com/pages/login.html"
             }
         }
         return '';
@@ -53,3 +57,5 @@ window.base={
     },
 
 }
+
+

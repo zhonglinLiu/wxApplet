@@ -4,146 +4,292 @@ $(function(){
         window.location.href = 'login.html';
     }
 
-    var pageIndex=1,
-        moreDataFlag=true;
-    getOrders(pageIndex);
-
-    /*
-    * 获取数据 分页
-    * params:
-    * pageIndex - {int} 分页下表  1开始
-    */
-
-    function getOrders(pageIndex){
-        var params={
-            url:'order/paginate',
-            data:{page:pageIndex,size:20},
-            tokenFlag:true,
-            sCallback:function(res) {
-                var str = getOrderHtmlStr(res);
-                $('#order-table').append(str);
-            }
-        };
-        window.base.getData(params);
-    }
-
-    /*拼接html字符串*/
-    function getOrderHtmlStr(res){
-        var data = res.data;
-        if (data){
-            var len = data.length,
-                str = '', item;
-            if(len>0) {
-                for (var i = 0; i < len; i++) {
-                    item = data[i];
-                    str += '<tr>' +
-                        '<td>' + item.order_no + '</td>' +
-                        '<td>' + item.snap_name + '</td>' +
-                        '<td>' + item.total_count + '</td>' +
-                        '<td>￥' + item.total_price + '</td>' +
-                        '<td>' + getOrderStatus(item.status) + '</td>' +
-                        '<td>' + item.create_time + '</td>' +
-                        '<td data-id="' + item.id + '">' + getBtns(item.status) + '</td>' +
-                        '</tr>';
-                }
-            }
-            else{
-                ctrlLoadMoreBtn();
-                moreDataFlag=false;
-            }
-            return str;
-        }
-        return '';
-    }
-
-    /*根据订单状态获得标志*/
-    function getOrderStatus(status){
-        var arr=[{
-            cName:'unpay',
-            txt:'未付款'
-        },{
-            cName:'payed',
-            txt:'已付款'
-        },{
-            cName:'done',
-            txt:'已发货'
-        },{
-            cName:'unstock',
-            txt:'缺货'
-        }];
-        return '<span class="order-status-txt '+arr[status-1].cName+'">'+arr[status-1].txt+'</span>';
-    }
-
-    /*根据订单状态获得 操作按钮*/
-    function getBtns(status){
-        var arr=[{
-            cName:'done',
-            txt:'发货'
-        },{
-            cName:'unstock',
-            txt:'缺货'
-        }];
-        if(status==2 || status==4){
-            var index=0;
-            if(status==4){
-                index=1;
-            }
-            return '<span class="order-btn '+arr[index].cName+'">'+arr[index].txt+'</span>';
-        }else{
-            return '';
-        }
-    }
-
-    /*控制加载更多按钮的显示*/
-    function ctrlLoadMoreBtn(){
-        if(moreDataFlag) {
-            $('.load-more').hide().next().show();
-        }
-    }
-
-    /*加载更多*/
-    $(document).on('click','.load-more',function(){
-        if(moreDataFlag) {
-            pageIndex++;
-            getOrders(pageIndex);
-        }
-    });
-    /*发货*/
-    $(document).on('click','.order-btn.done',function(){
-        var $this=$(this),
-            $td=$this.closest('td'),
-            $tr=$this.closest('tr'),
-            id=$td.attr('data-id'),
-            $tips=$('.global-tips'),
-            $p=$tips.find('p');
-        var params={
-            url:'order/delivery',
-            type:'put',
-            data:{id:id},
-            tokenFlag:true,
-            sCallback:function(res) {
-                if(res.code.toString().indexOf('2')==0){
-                   $tr.find('.order-status-txt')
-                       .removeClass('pay').addClass('done')
-                       .text('已发货');
-                    $this.remove();
-                    $p.text('操作成功');
-                }else{
-                    $p.text('操作失败');
-                }
-                $tips.show().delay(1500).hide(0);
-            },
-            eCallback:function(){
-                $p.text('操作失败');
-                $tips.show().delay(1500).hide(0);
-            }
-        };
-        window.base.getData(params);
-    });
-
     /*退出*/
     $(document).on('click','#login-out',function(){
         window.base.deleteLocalStorage('token');
         window.location.href = 'login.html';
     });
+
+    window.onload = function(){
+        var url = window.location.hash.substring(1);
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        //注册路由
+        pubsub.subscribe('/home',function(){
+            homeModel.init();
+        })
+
+        pubsub.subscribe('/order',function(){
+            orderModel.init();
+        },['../js/order.js']);
+
+        pubsub.subscribe('/category',function(){
+            categoryModel.init();
+        },['../js/category.js','../css/category/category.css'])
+
+        pubsub.subscribe('/todayRegister',function(){
+            todayRegistModel.init();
+        },['../js/todayRegister.js','../css/home/todayRegister.css']);
+
+        pubsub.subscribe('/category?id=:id&catename=:catename',function(params){
+            categeryProductsModel.init(params);
+        },['../js/categeryProducts.js','../css/category/categoryProductt.css']);
+
+        pubsub.subscribe('/product',function(){
+            productModel.init();
+        },['../css/product/product.css','../js/product.js']);
+
+        pubsub.subscribe('/product?page:page&size:size',function(params){
+            productModel.init(params);
+        },['../css/product/product.css','../js/product.js']);
+        pubsub.subscribe('/product/add',function(){
+            proaddModel.init();
+        },['../js/productAdd.js',
+            '../js/webuploader/0.1.5/webuploader.css','../js/webuploader/0.1.5/webuploader.js',
+            '../js/upload/upload.js','../js/upload/uploadImg.css','../css/product/add.css'
+        ])
+
+        //路由别名
+        /*var alias = {
+            "/home":'home',
+            "home":'home',
+            "index":'home',
+            "order":'order',
+            "/order":'order',
+            "/category":'category',
+            "category":'category',
+            "todayRegister":'todayRegister',
+            "/todayRegister":'todayRegister'
+        };
+        window.base.alias = alias;*/
+
+        //路由到的页面
+        var match = pubsub.routeMatch();
+        var params =[];
+        if(match!==true){
+            var url = match['url'];
+            params = match['params'];
+        }
+        if(!url){
+            pubsub.public('/home',params);
+        }else{
+            pubsub.public(url,params);
+        }
+        
+    }
+    /*window.onscroll = function(){
+        console.log('scroll')
+    }*/
+    
+    
+
+    //锚点跳转后触发的事件
+    window.onhashchange = function(){
+        window.base.public();
+    }
+
+    window.base.public = function(){
+        var url =window.location.hash.substring(1);
+        var match = pubsub.routeMatch();
+        var params =[];
+        if(match!==true){
+            url = match['url'];
+            params = match['params'];
+        }
+        pubsub.public(url,params);
+        window.onscroll = null
+    }
+
+
+   
+
+
+    var list = $(".leftbar-item a");
+    $('.leftbar-item').delegate('a','mouseup',function(){
+        for(var i=0;i<list.length;i++){
+            $(list[i]).removeClass('active');
+        }
+        $(this).addClass('active');
+    })
+
+
+
 });
+
+function stopScroll(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+
+
+//观察者模式 用于注册全局路由
+var pubsub = (function(){
+    var subUid = -1;
+    function pubsub(){
+
+    };
+    pubsub.topics = [];
+    pubsub.prototype.public = function(topic,argu) {
+        this.stopScroll();
+        if(!pubsub.topics[topic]){
+            return false;
+        }
+        var subscribers = pubsub.topics[topic],
+            len = subscribers ? subscribers.length : 0;
+
+        var index = layer.load(0, {time: 10000});
+        while(len--)
+        {
+            var urlArr = subscribers[len].url;
+            var loadedNum = 0;
+            if(!urlArr.length || subscribers[len].isLoad ){
+                subscribers[len].func(argu);
+                layer.close(index);
+                continue;
+            }
+            for(var i =0;i<urlArr.length;i++){
+                if(urlArr[i].slice(-3).toLowerCase()=='css'){
+                    loadedNum++
+                }
+                if( !!subscribers[len].url ){
+                    var sLoad = new ScriptLoad(urlArr[i],function()
+                    {
+                        loadedNum++;
+                        if(loadedNum==urlArr.length)
+                        {
+                            layer.close(index);
+                            loadedNum = false;
+                            subscribers[len].isLoad = true;
+                            subscribers[len].func(argu);
+                        }
+                    });
+                    sLoad.get();
+                }
+                else
+                {
+                    subscribers[len].func(argu);
+                }
+            }
+            if(len<=0){
+                break;
+            }
+        }
+    };
+
+    /**
+     * [subscribe 注册路由]
+     * @param  {[string]} topic [路由别名]
+     * @param  {[object]} func  [需要执行的类或方法]
+     * @param  {[array]} url   [依赖的js和css文件路径]
+     * @return {[string]}       [路由id号]
+     */
+    pubsub.prototype.subscribe  = function(topic,func,url) {
+        if(!pubsub.topics[topic]){
+            pubsub.topics[topic] = [];
+        }
+        var token = (++subUid).toString();
+        pubsub.topics[topic].push({
+            token:token,
+            func:func,
+            isLoad: false,
+            url: !!url ? url : []
+        });
+        return token
+    };
+
+    /**
+     * [unsubscribe 通过路由id号销毁路由]
+     * @param  {[type]} token [路由id号]
+     * @return {[type]}       [description]
+     */
+    pubsub.prototype.unsubscribe = function(token) {
+        for(var i in pubsub.topics){
+            if( (pubsub.topics[i]) ){
+                for(var k in pubsub.topics[i]){
+                    if(pubsub.topics[i][k].token == token){
+                        pubsub.topics[i].splice(k,1);
+                        return true;
+                    }
+                }
+            }
+        }
+    };
+    pubsub.prototype.routeMatch = function() {
+        //category?id=123
+        //category?id=:id
+        var url = window.location.hash.substring(1);
+        var rg = /(.*\?)(.*)$/;
+        var rgArr = rg.exec(url);
+        if(rgArr==null){
+            return true;
+        }
+        var prefix = rgArr[1];
+        var arr = rgArr[2].split('&');
+        var paramsArr = [];
+        for(var k in arr){
+            var temp = arr[k].split('=');
+            var obj = {};
+            obj[temp[0]] = temp[1];
+            paramsArr.push(obj);
+        }
+        var paramsStr = '';
+        for(var i=0;i<paramsArr.length;i++){
+            for(var k in paramsArr[i]){
+                if(!paramsArr[i][k])
+                    continue;
+                paramsStr+=k+'=:'+k+'&';
+            }
+        }
+        paramsStr = paramsStr.slice(0,-1);
+        paramsStr = prefix+paramsStr;
+        return {
+            params:paramsArr,
+            url:paramsStr
+        }
+
+    };
+
+    pubsub.prototype.stopScroll = function(first_argument) {
+        window.onscroll = stopScroll;
+        setTimeout(function(){
+            window.onscroll = null
+        },60)
+    };
+    return new pubsub();
+})()
+
+
+//js 自动加载
+function ScriptLoad(url,callback){
+    this.url = url;
+    if(url.slice(-2).toLowerCase()=='js'){
+        var js = document.createElement("script");
+        this.js = js;
+        js.setAttribute("type",'text/javascript');
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(js);
+        if(navigator.appName.toLowerCase().indexOf('netscape') == -1){
+            js.onreadystatechange = function(){
+                if(js.readyState == 'complete'){
+                    callback();
+                }
+            }
+        }else{
+            js.onload = function(){
+                callback();
+            }
+        }
+    }else{
+        var link = document.createElement("link");
+        link.setAttribute("type",'text/css');
+        link.setAttribute("rel",'stylesheet');
+        link.setAttribute('href',this.url);
+        document.getElementsByTagName("head")[0].appendChild(link);
+    }
+    
+}
+ScriptLoad.prototype.get = function(){
+    if(this.url.slice(-2).toLowerCase()=='js'){
+        this.js.src = this.url;
+    }
+    
+}
+

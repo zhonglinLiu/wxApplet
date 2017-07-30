@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*.ttlsa.com">
     <title>零食商贩－订单列表</title>
     <link rel="shortcut icon" href="../favicon.ico"/>
     <link href="../css/index/index.css" type="text/css" rel="stylesheet">
     <link href="../css/index/iconfont/iconfont.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/home/home.css">
+    <link rel="stylesheet" type="text/css" href="../js/layui/css/layui.css">
+    
 </head>
 <body>
     <div class="banner-wrapper">
@@ -25,34 +29,27 @@
             <div class="desktop-menu">
                 <ul>
                     <li class="leftbar-item">
-                        <a class="active">
-                            <i class="iconfont icon-list"></i>
+                        <a id="home" href="#/home" class="">
+                            <i class="iconfont icon-home" ></i>
+                            <span>主页</span>
+                        </a>
+                        <a id="category" href="#/category" class="">
+                            <i class="iconfont icon-fenlei" ></i>
+                            <span>分类列表</span>
+                        </a>
+                        <a id="product" href="#/product" class="">
+                            <i class="iconfont icon-list" ></i>
+                            <span>商品列表</span>
+                        </a>
+                        <a id="order" href="#/order" class="" attr-name="orderModel">
+                            <i class="iconfont icon-list" ></i>
                             <span>订单列表</span>
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="desktop-main">
-                <div class="order-box">
-                    <table cellspacing="0" ng-show="docArr.length>0">
-                        <thead>
-                            <tr>
-                                <td>订单号</td>
-                                <td>商品名称</td>
-                                <td>商品总数</td>
-                                <td>商品总价格</td>
-                                <td>订单状态</td>
-                                <td>下单时间</td>
-                                <td>操作</td>
-                            </tr>
-                        </thead>
-                        <tbody id="order-table">
-
-                        </tbody>
-                    </table>
-                    <div class="load-more">点击加载更多</div>
-                    <div class="no-more">没有更多订单了</div>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -60,7 +57,13 @@
         <p></p>
     </div>
 </body>
-<script src="../js/common.js" type="application/javascript"></script>
 <script src="../js/jquery-1.8.2.min.js" type="application/javascript"></script>
+<script src="../js/common.js" type="application/javascript"></script>
+<script src="../js/home.js" type="application/javascript"></script>
 <script src="../js/index.js" type="application/javascript"></script>
+<script src="../js/layer/layer.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/layui/layui.js" ></script>
+
+<!-- <script type="text/javascript" src="../js/layui/lay/modules/laypage.js" ></script> -->
+
 </html>
