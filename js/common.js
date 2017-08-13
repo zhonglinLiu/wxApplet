@@ -23,7 +23,7 @@ window.base={
                 if(respose.code==40001){
                     window.location.href="http://zergcms.com/pages/login.html"
                 }
-                params.eCallback && params.eCallback(res);
+                params.eCallback && params.eCallback(respose);
             }
         });
     },

@@ -3,6 +3,31 @@
 	clear: both;
 	/*height: 500px;*/
 }
+.category-box .category-tool{
+	width:900px;
+	margin:0 auto;
+}
+
+.category-tool .add-icon{
+	font-size: 36px;
+	color: rgba(61,107,164,0.67);
+	margin-right: 40px;
+}
+.category-tool .add-icon:hover{
+	color: #7a2518;
+}
+.category-icon-box{
+	position: relative;
+	left:10px;
+	top:40px;
+}
+.category-icon-box i{
+	margin: 0 5px;
+	text-align: center;
+}
+.category-icon-box i:hover{
+	color:#3d6ba4;
+}
 .category-box li{
 	width:333.3px;
 	float: left;

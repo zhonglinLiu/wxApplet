@@ -7,10 +7,9 @@ var productModel = (function($){
 			this.page = 1;
 			this.size = 5;
 		}else{
-			this.page = params[0].page;
-			this.size = params[1].size;
+			this.size = params.size;
+			this.page = params.page;
 		}
-		
 		this.desktop.empty();
 		this.initUI();
 		this.getTotalPage();
@@ -61,7 +60,7 @@ var productModel = (function($){
 		var str = 
 		'<div class="bar-main">'+
 			'<div class="product-tool">'+
-                '<a href="#/product/add" ><i class="layui-icon add-icon " >&#xe608;</i></a>'+
+                '<a href="javascript:void(0)" class="product-add-icon" ><i class="layui-icon add-icon " >&#xe608;</i></a>'+
             '</div>'+
            '<div class="search-box" >'+
           	 	' <div class="prompt" >'+
@@ -107,9 +106,13 @@ var productModel = (function($){
                     '<td>'+d[i].stock+'</td>'+
                     '<td>'+d[i].create_time+'</td>'+
                     '<td>'+d[i].update_time+'</td>'+
-                    '<td><a href="javascript:void(0)" ><i class="layui-icon edit-icon " >&#xe642;</i></a>'+
-                    '<a href="javascript:void(0)"><i class="layui-icon del-icon " >&#xe640;</i></a></td>'+
-                '</tr>';
+                    '<td>'+
+                    	'<a href="javascript:void(0)" ><i class="layui-icon edit-icon" attr-id="'+d[i].id+'" >&#xe642;</i></a>'+
+                    	'<a href="javascript:void(0)" ><i class="layui-icon edit-property-icon" attr-id="'+d[i].id+'" >&#xe620;</i></a>'+
+                    	'<a href="javascript:void(0)" ><i class="layui-icon edit-img-order-icon " >&#xe634;</i></a>'+
+                    	'<a href="javascript:void(0)"><i class="layui-icon img-icon " attr-id="'+d[i].id+'" >&#xe60d;</i></a>'+
+                    	'<a href="javascript:void(0)"><i class="layui-icon del-icon " >&#xe640;</i></a>'+
+                	'</td></tr>';
 	    }
 	    return str;
 	};
@@ -119,6 +122,7 @@ var productModel = (function($){
 		this.getproductData(function(d){
 			var str = _this.preProductsList(d);
 			_this.tablebody.html(str);
+			_this.bindProductListEvent();
 		})
 	};
 
@@ -142,7 +146,8 @@ var productModel = (function($){
 		    	if(flog)
 		    		_this.renderProductList();
 		    	flog = true;
-		    }
+		    },
+		    hash: 'product?size=5&page'
 		  });
 
 		  
@@ -152,7 +157,6 @@ var productModel = (function($){
 	product.prototype.bindEvent = function() {
 		$('.help-icon').hover(
 			function(){
-				console.log(1232)
 				$('.prompt').show()
 			},
 			function(){
@@ -167,14 +171,51 @@ var productModel = (function($){
 			$('.search-icon').show();
 		})
 
-		$('.add-icon').hover(function(){
-			layer.tips('添加商品',this,{
-				tips:[2,'#3D6BA4']
-			});
+		$('.add-icon').hover(
+			function(){
+				layer.tips('添加商品',this,{
+					tips:[1,'#3D6BA4']
+				});
+			},
+			function(){
+				
+			}
+		)
+
+		$('.product-add-icon').click(function(){
+			pubsub.public('/product/add');
 		})
-		$('.add-icon').click(function(){
-			window.base.public();
+
+		
+	};
+
+	product.prototype.bindProductListEvent = function() {
+		$('.img-icon').click(function(){
+			pubsub.public('/product/addImage?product_id=:product_id',{ 'product_id':$(this).attr('attr-id')});
+		});
+		$('.edit-icon').hover(
+			function(){
+				layer.tips('修改商品',this,{
+					tips:[1,'#3D6BA4']
+				});
+			},
+			function(){}
+		);
+		$('.edit-property-icon').hover(
+			function(){
+				layer.tips('修改商品属性',this,{
+					tips:[1,'#3D6BA4']
+				});
+			},
+			function(){}
+		)
+		$('.edit-property-icon').click(function(){
+			pubsub.public('/product/addProperty?product_id=:product_id',{'product_id':$(this).attr('attr-id')})
 		})
+		$('.edit-icon').click(function(){
+			pubsub.public('/product?product_id:product_id',{'product_id':$(this).attr('attr-id')});
+		})
+
 	};
 
 	return new product()

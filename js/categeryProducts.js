@@ -6,8 +6,8 @@ var categeryProductsModel = (function($){
 
 	category.prototype.init = function(params) {
 		this.desktop.empty();
-		this.id = params[0].id;
-		this.catename = params[1].catename;
+		this.id = params.id;
+		this.catename = params.catename;
 		if(!!this.productsArr[this.id]){
 			this.desktop.html(this.productsArr[this.id]);
 			return;

@@ -1,7 +1,8 @@
 .add-box{
 
 }
-.category-box{
+
+.product-add-category-box{
 	margin-left:110px;
 	margin-bottom: 10px;
 	width:670px;
@@ -16,21 +17,99 @@
 	margin: 0 10px 10px 0;
 	float: right;
 }
-#uploader .placeholder {
+.uploader .placeholder {
 	height: 100px;
 	min-height: 100px;
     padding-top: 20px;
     background: url('/js/upload/image.png') center 30px no-repeat
 }
-#filePicker{
+.filePicker{
 	float: right;
 }
 
-#uploader .placeholder .webuploader-pick {
+.uploader .placeholder .webuploader-pick {
 	width: 80px;
 	font-size: 16px;
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
 	margin-top: 40px;
+}
+.product_img_submit{
+	width:80px;
+	height: 30px;
+	border-radius: 4px;
+	float: right;
+	margin:10px 10px;
+	background: rgba(61,107,164,0.7);
+}
+.product_img_submit:hover{
+	background: rgba(61,107,164,1);
+	
+}
+
+/*product-property*/
+.product-proprety-box{
+	margin: 10px;
+}
+.product-property-add-icon{
+	font-size: 32px;
+	color: rgba(61,107,164,0.7);
+}
+.product-property-add-icon:hover{
+	cursor: pointer;
+	color: rgba(61,107,164,1);
+}
+
+.product-property-del-icon{
+	float: right;
+}
+.product-property-del-icon:hover{
+	cursor: pointer;
+	color:rgba(61,107,164,1);
+}
+.product-property-tbody .property-detail{
+	display: inline-block;
+	border:none;
+	background: none;
+}
+.product-property-tbody .property-name{
+	border:none;
+	background: none;
+}
+.product-property-tbody input{
+width:80%;
+}
+.product-property-tbody input:focus{
+	border:none;
+	text-indent:5px;
+	border-bottom: 1px solid rgba(61,107,164,1);
+}
+.product-property-save{
+	float: right;
+}
+
+/*img sort*/
+.product-img-sort .sort-id{
+	width:26px;
+	height: 206x;
+	border: 1px solid rgba(61,107,164,1);
+	text-align: center;
+	border-radius: 13px; 
+	font-size: 13px;
+	font-weight: bold;
+}
+.product-sort-tool i.add-icon{
+	font-size: 30px;
+}
+.product-sort-tool i.add-icon:hover{
+	cursor: pointer;
+	color:rgba(61,107,164,1);
+}
+.product-img-sort .product-img-del{
+	float: right;
+}
+.product-img-sort .product-img-del:hover{
+	cursor: pointer;
+	color:red;
 }

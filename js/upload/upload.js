@@ -1,10 +1,11 @@
 var UploadImage = function(opts) {
+    var filePicker = 'filePicker'+(new Date).getTime();
+    var filePicker2 = 'filePicker2'+(new Date).getTime();
     var $ = jQuery,    // just in case. Make sure it's not an other libaray.
         str = 
          '<div class="queueList">'+
         '<div id="dndArea" class="placeholder">'+
-                '<div id="filePicker"></div>'+
-                '<p>或将照片拖到这里，单次最多可选300张</p>'+
+                '<div id="'+filePicker+'" class="filePicker" ></div>'+
             '</div>'+
         '</div>'+
         '<div class="statusBar" style="display:none;">'+
@@ -13,7 +14,7 @@ var UploadImage = function(opts) {
                 '<span class="percentage"></span>'+
             '</div><div class="info"></div>'+
             '<div class="btns">'+
-                '<div id="filePicker2"></div><div class="uploadBtn">开始上传</div>'+
+                '<div id="'+filePicker2+'" class="filePicker2"></div><div class="uploadBtn">开始上传</div>'+
             '</div>'+
         '</div>',
         // $wrap = $('#uploader').append($(str)),
@@ -75,14 +76,14 @@ var UploadImage = function(opts) {
         alert( 'Web Uploader 不支持您的浏览器！如果你使用的是IE浏览器，请尝试升级 flash 播放器');
         throw new Error( 'WebUploader does not support the browser you are using.' );
     }
-
+    
     // 实例化
     uploader = WebUploader.create({
         pick: {
-            id: '#filePicker',
+            id: '#'+filePicker,
             label: '点击选择图片'
         },
-        dnd: '#uploader .queueList',
+        dnd: opts.wrap+' .queueList',
         paste: document.body,
 
         accept: {
@@ -106,7 +107,7 @@ var UploadImage = function(opts) {
 
     // 添加“添加文件”的按钮，
     uploader.addButton({
-        id: '#filePicker2',
+        id: '#'+filePicker2,
         label: '继续添加'
     });
 
@@ -157,6 +158,8 @@ var UploadImage = function(opts) {
 
                 var img = $('<img src="'+src+'">');
                 $wrap.empty().append( img );
+                
+                
             }, thumbnailWidth, thumbnailHeight );
 
             percentages[ file.id ] = [ file.size, 0 ];
@@ -326,7 +329,7 @@ var UploadImage = function(opts) {
 
             case 'ready':
                 $placeHolder.addClass( 'element-invisible' );
-                $( '#filePicker2' ).removeClass( 'element-invisible');
+                $( '#'+filePicker2 ).removeClass( 'element-invisible');
                 $queue.parent().addClass('filled');
                 $queue.show();
                 $statusBar.removeClass('element-invisible');
@@ -334,7 +337,7 @@ var UploadImage = function(opts) {
                 break;
 
             case 'uploading':
-                $( '#filePicker2' ).addClass( 'element-invisible' );
+                $( '#'+filePicker2 ).addClass( 'element-invisible' );
                 $progress.show();
                 $upload.text( '暂停上传' );
                 break;
