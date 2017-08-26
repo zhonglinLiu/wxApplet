@@ -5,7 +5,7 @@ use app\api\model\Base;
 use app\lib\exception\BaseException;
 class Product extends Base{
 	protected $hidden = [
-		'pivot','category_id','from','create_time','update_time','img_id'
+		'pivot','from','create_time','update_time','img_id'
 	];
 
 	public function getMainImgUrlAttr($value){
@@ -38,4 +38,15 @@ class Product extends Base{
 			}
 		])->with(['properties'])->where(['id'=>$id])->find();
 	}
+
+	public function getProductByPage($page=1,$size=10){
+		$this->hidden = [
+			'pivot','category_id','from','img_id'
+		];
+		$offset = ($page-1)*$size;
+		return $this->order('create_time','desc')->limit($offset,$size)->select()->visible([
+			'id','name','price','main_img_url','create_time','update_time','stock'
+		]);
+	}
+
 }

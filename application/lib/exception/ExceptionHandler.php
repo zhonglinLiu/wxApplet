@@ -23,7 +23,7 @@ class ExceptionHandler extends Handle{
             if(config('app_debug')){
                 return parent::render($e);
             }
-        	//TODOsentry发送错误日志
+        	//TODO sentry发送错误日志
         }
 
         $rel = [

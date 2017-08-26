@@ -29,8 +29,17 @@ Route::get('api/:version/themes/:id','api/:version.Theme/getTheme');
 
 //获取一个商品信息
 Route::get('api/:version/products/recent','api/:version.Product/getRecent');
+Route::get("api/:version/products/by_page",'api/:version.Product/getProdyctByPage');
+Route::get("api/:version/products/count",'api/:version.Product/getTotalCount');
 Route::get('api/:version/products/by_category','api/:version.Product/getAllInCategory');
-Route::get('api/:version/products/:id','api/:version.Product/getOne',[],[':id'=>'\d+']);
+Route::post('api/:version/products/addone','api/:version.Product/addProduct');
+Route::post('api/:version/products/addImage','api/:version.Product/addImage');
+Route::post('api/:version/products/addProperty','api/:version.Product/addProperty');
+Route::get('api/:version/products/getProperty','api/:version.Product/getProperty');
+Route::post('api/:version/products/delProperty','api/:version.Product/delProperty');
+Route::get('api/:version/products/getImgs','api/:version.Product/getImgs');
+Route::post('api/:version/products/imgOrder','api/:version.Product/imgOrder');
+Route::get('api/:version/products/:id','api/:version.Product/getOne',[],['id'=>'\d+']);
 
 //获取分类
 Route::get('api/:version/category/all','api/:version.Category/getAllCates');
@@ -75,3 +84,6 @@ Route::post('api/:version/pay/proPay','api/:version.Pay/prePay');
 
 //微信回调
 Route::any('api/:version/pay/notify','api/:version.Pay/receiveNotify');
+
+//上传图片
+Route::post('api/:version/upload/image','api/:version.Upload/image');
