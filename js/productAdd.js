@@ -74,69 +74,24 @@ var proaddModel = (function($){
 		if(arguments.length == 0){
 			var trs = '';
 		}
-		var str = 
-		'<div class="product-proprety-box" >'+
-		 		'<div class="product-property">'+
-                    '<i class="layui-icon product-property-add-icon" >&#xe608;</i>'+
-                '</div>'+
-            '<form class="product-property-form" >'+
-			'<table class="layui-table">'+
-              '<colgroup>'+
-                '<col width="150">'+
-                '<col>'+
-              '</colgroup>'+
-              '<thead>'+
-                '<tr>'+
-                  '<th>商品属性</th>'+
-                  '<th>属性详情</th>'+
-                '</tr>' +
-              '</thead>'+
-              '<tbody class="product-property-tbody" >'+
-              	trs+
-              '</tbody>'+
-            '</table>'+
-            '</form>'+
-            '<button class="layui-btn layui-btn-primary product-property-save ">保存</button>'+
-		'</div>';
-		this.str = str;
+		
+		this.str = htmlString.productProperty(trs);
 	};
 
 	product.prototype.renderPropertyListUI = function(d) {
-		var str = '';
-		for(var k in d){
-			str+=
-				'<tr attr-property-id="'+d[k].id+'" class="tr-property-id" >'+
-                  '<td> <input type="text" class="property-name" name="name" value="'+d[k].name+'" /></td>'+
-                  '<td> <input type="text" class="property-detail" name="detail" value="'+d[k].detail+'" /> <i class="layui-icon product-property-del-icon" >&#xe640;</i> </td>'+
-                '</tr>';
-		}
-		return str;
+		return htmlString.addImgsRows(d);
 	};
 
 	
 
 	product.prototype.renderProductImgUI = function() {
-		var str = 
-			'<div id="form-box" >'+
-				'<label class="layui-form-label">添加商品详情图片</label>'+
-				'<div id="uploader2" class="uploader" ></div>'+
-				'<form class="layui-form add-product-form" action="">'+
-					'<input type="hidden" name="id" value="'+this.product_id+'">'+
-					'<button class="layui-btn submit-btn" lay-submit lay-filter="formDemo">立即提交</button>'+
-				'</form>'+
-			'</div>';
-		this.str = str;
+		this.str = htmlString.addImgs(this.product_id);
 	};
 
 	product.prototype.requestCategorys = function(callback) {
-		var params = {
-			type:'get',
-			url:'category/all',
-			sCallback:function(d){
-				callback && callback(d);
-			}
-		}
-		window.base.getData(params);
+		requestAction.requestCategorys(function(d){
+			callback && callback(d);
+		})
 	};
 	product.prototype.requestProperty = function(id,callback) {
 		var params = {
@@ -149,18 +104,7 @@ var proaddModel = (function($){
 		window.base.getData(params);
 	};
 	product.prototype.requestPropertyAdd = function(data,callback) {
-		var params = {
-			type:'post',
-			url:'products/addProperty',
-			data:{'propertys':data},
-			sCallback: function(d){
-				callback && callback(d);
-			},
-			eCallback: function(d){
-				callback && callback(d);
-			}
-		}
-		window.base.getData(params);
+		requestAction.requestProperty(data,callback);
 	};
 
 	product.prototype.renderCategeryUI = function(d,data) {
@@ -172,61 +116,8 @@ var proaddModel = (function($){
 	};
 
 	product.prototype.preDom = function(data) {
-		var data = data ? data : {};
-		var str = 
-		'<div id="form-box" >'+
-		 '<form class="layui-form add-product-form" action="">'+
-	      '<div class="layui-form-item">'+
-	        '<label class="layui-form-label">商品名称</label>'+
-	        '<div class="layui-input-block">'+
-	          '<input type="text" name="name" value="'+(!!data.name ? data.name :"")+'" required  lay-verify="required" placeholder="请输入商品名称" autocomplete="off" class="layui-input">'+
-	        '</div>'+
-	      '</div>'+
-	        
-	     '<div class="layui-form-item">'+
-	        '<label class="layui-form-label">商品价格</label>'+
-	        '<div class="layui-input-block">'+
-	          '<input type="text" name="price" value="'+(!!data.price ? data.price :"")+'" required  lay-verify="required" placeholder="请输入商品价格" autocomplete="off" class="layui-input">'+
-	        '</div>'+
-	      '</div>'+
-	        
-	        '<div class="layui-form-item">'+
-	        '<label class="layui-form-label">商品库存</label>'+
-	        '<div class="layui-input-block">'+
-	          '<input type="text" name="stock" value="'+(!!data.stock ? data.stock :"")+'" required  lay-verify="required|number" placeholder="请输入商品库存" autocomplete="off" class="layui-input">'+
-	        '</div>'+
-	      '</div>'+
-	        
-	        '<div class="product-add-category-box">'+
-	         '<select name="category_id" lay-verify="required">'+
-	          '<option value="">请选择所属分类</option>'+
-	          this.selectStr+
-	        '</select>'+
-	        '</div>'+
-
-	         '<div class="layui-form-item">'+
-                '<label class="layui-form-label">图片来源</label>'+
-                '<div class="layui-input-block">'+
-                  '<input type="radio" name="from" value="2" '+(data.from==2 ? "check" : '')+' title="公网">'+
-                  '<input type="radio" name="from" value="1" '+(data.from==1 ? "check" : '')+' title="本地" checked>'+
-                '</div>'+
-              '</div>'+
-	    
-	      '<div class="layui-form-item layui-form-text">'+
-	        '<label class="layui-form-label">摘要</label>'+
-	        '<div class="layui-input-block">'+
-	          '<textarea name="summary"  value="'+(!!data.summary ? data.summary :"")+'" placeholder="请输入内容" class="layui-textarea"></textarea>'+
-	        '</div>'+
-	      '</div>'+
-	      '<div class="layui-form-item">'+
-	      	'<label class="layui-form-label">商品主图片</label>'+
-	      	(!!data.main_img_url ? '<img src="'+data.main_img_url+'" >' : '')+
-	      '</div>'+
-	      '<div id="uploader" class="uploader" ></div>'+
-	      '<button class="layui-btn submit-btn" lay-submit lay-filter="formDemo">立即提交</button>'+
-	    '</form>'+
-	    '</div>';
-	    this.str = str;
+		
+	    this.str = htmlString.productMain(data,this.selectStr);
 	};
 
 	product.prototype.renderLayerUI = function(callback) {
@@ -242,10 +133,6 @@ var proaddModel = (function($){
 				content: _this.str,
 				success:function(){
 					callback && callback()
-					/*_this.useLayerForm(function(d){
-						formCallback(d);
-					});
-					_this.userLayerUpload();*/
 				}
 			})
 		})
@@ -255,54 +142,35 @@ var proaddModel = (function($){
 
 	product.prototype.productImgFormCallback = function(d) {
 		var _this = this;
-		var params = {
-			type:'post',
-			url:'products/addImage',
-			data:d,
-			sCallback:function(d){
-				if(d.code=='200'){
-					layer.close(_this.layerIndex);
-					var layerIndex = layer.open({
-						title:'提示',content: d.msg,icon:1,
-						yes: function(){
-							layer.close(layerIndex);
-							// _this.initProductProperty();
-							pubsub.public('/product/productProperty?product_id='+d.product_id);
-						}
-					});
-				}else{
-					layer.open({title:'提示',content: d.msg,icon:2,});
-				}
-			},
-			eCallback:function(d){
+		requestAction.requestAddImg(d,function(d){
+			if(d.code=='200'){
+				layer.close(_this.layerIndex);
+				var layerIndex = layer.open({
+					title:'提示',content: d.msg,icon:1,
+					yes: function(){
+						layer.close(layerIndex);
+						// _this.initProductProperty();
+						pubsub.public('/product/productProperty?product_id='+d.product_id);
+					}
+				});
+			}else{
 				layer.open({title:'提示',content: d.msg,icon:2,});
 			}
-		}
-
-		window.base.getData(params);
+		})
 	};
 
 	product.prototype.formCallback = function(d) {
 		var _this = this;
-		var params = {
-			type:'post',
-			url:'products/addone',
-			data:d,
-			sCallback:function(d){
-				layer.close(_this.layerIndex);
-				if(!!d.product_id){
-					// _this.product_id = d.product_id;
-					// _this.initProductImg();
-					pubsub.public('/product/addImage?product_id=:product_id',{ 'product_id':d.product_id});
-				}
-				
-			},
-			eCallback:function(d){
+
+		//To be tested
+		requestAction.requestAddProduct(d,function(d){
+			layer.close(_this.layerIndex);
+			if(!!d.product_id){
+				pubsub.public('/product/addImage?product_id=:product_id',{ 'product_id':d.product_id});
+			}else{
 				console.log(d);
 			}
-		}
-
-		window.base.getData(params);
+		})
 	};
 
 
@@ -348,23 +216,15 @@ var proaddModel = (function($){
 				product_id:_this.product_id,
 				id:tr.attr('attr-property-id')
 			};
-			var params = {
-				type:'post',
-				url:'products/delProperty',
-				data:data,
-				sCallback:function(d){
-					if(d.code==200){
-						tr.remove();
-						layer.open({title:'提示',content:d.msg,icon:1,})
-					}else{
-						layer.open({title:'提示',content:d.msg,icon:2,})
-					}
-				},
-				eCallback:function(d){
+
+			requestAction.requestDelProperty(data,function(d){
+				if(d.code==200){
+					tr.remove();
+					layer.open({title:'提示',content:d.msg,icon:1,})
+				}else{
 					layer.open({title:'提示',content:d.msg,icon:2,})
 				}
-			}
-			window.base.getData(params);
+			})
 		});
 	};
 	product.prototype.bindOncePropertyEvent = function(){
@@ -403,6 +263,7 @@ var proaddModel = (function($){
 				}
 			}
 			console.log(data);
+			data = {propertys:data};
 			_this.requestPropertyAdd(data,function(d){
 				
 				if(d.code=='200'){

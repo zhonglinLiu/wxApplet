@@ -57,18 +57,12 @@ var orderModel = (function($){
     */
     order.prototype.getOrders = function(){
     	var _this = this;
-        var params={
-            url:'user_orders',
-            type: 'get',
-            data:{page:this.pageIndex,size:5},
-            tokenFlag:true,
-            sCallback:function(res) {
-                _this.pushOrders(res.data);
-                var str = _this.getOrderHtmlStr(res.data);
-                $('#order-table').append(str);
-            }
-        };
-        window.base.getData(params);
+        var data = {page:this.pageIndex,size:5};
+        requestAction.requestGetOrder(data,function(res){
+            _this.pushOrders(res.data);
+            var str = _this.getOrderHtmlStr(res.data);
+            $('#order-table').append(str);
+        })
         return;
     }
 

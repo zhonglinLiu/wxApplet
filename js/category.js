@@ -16,14 +16,9 @@ var categoryModel = (function(){
 			return;
 		}
 		var _this = this;
-		var params = {
-			type:'get',
-			url:'category/all',
-			sCallback: function(d){
-				_this.renderUI(d);
-			}
-		}
-		window.base.getData(params)
+		requestAction.requestCategorys(function(res){
+			_this.renderUI(res);
+		})
 	};
 
 	category.prototype.renderUI = function(d) {

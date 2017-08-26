@@ -60,16 +60,22 @@ $(function(){
             '../js/webuploader/0.1.5/webuploader.css','../js/webuploader/0.1.5/webuploader.js',
             '../js/upload/upload.js','../js/upload/uploadImg.css','../css/product/add.css'
         ])
-        /*pubsub.subscribe('/product/edit',function(){
-            productDetailModel.init();
-        })*/
 
         pubsub.subscribe('/product/addProperty?product_id=:product_id',function(params){
             proaddModel.initProductProperty(params);
         },['../js/productAdd.js','../css/product/add.css']);
 
-        // pubsub.subscribe('!product?size=:size&page=:page')
+        pubsub.subscribe('/product/editImgs?product_id=:product_id',function(params){
+            productImgSort.init(params);
+        },['../js/productImgSort.js','../css/product/add.css']);
 
+        pubsub.subscribe('/product/showBigImg?url=:url',function(params){
+            productImgSort.initShowBigImg(params);
+        },['../js/productImgSort.js','../css/product/add.css']);
+
+        pubsub.subscribe('/theme',function(){
+            themeModel.init();
+        },['../js/theme.js','../css/theme/theme.css']);
         //路由别名
         var alias = {
             // "!product?size=:size&page=:page":'/product?size=:size&page=:page',
@@ -272,7 +278,7 @@ var pubsub = (function(){
 
     };
 
-    pubsub.prototype.stopScroll = function(first_argument) {
+    pubsub.prototype.stopScroll = function() {
         window.onscroll = stopScroll;
         setTimeout(function(){
             window.onscroll = null

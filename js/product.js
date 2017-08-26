@@ -109,7 +109,7 @@ var productModel = (function($){
                     '<td>'+
                     	'<a href="javascript:void(0)" ><i class="layui-icon edit-icon" attr-id="'+d[i].id+'" >&#xe642;</i></a>'+
                     	'<a href="javascript:void(0)" ><i class="layui-icon edit-property-icon" attr-id="'+d[i].id+'" >&#xe620;</i></a>'+
-                    	'<a href="javascript:void(0)" ><i class="layui-icon edit-img-order-icon " >&#xe634;</i></a>'+
+                    	'<a href="javascript:void(0)" ><i class="layui-icon edit-img-order-icon " attr-id="'+d[i].id+'" >&#xe634;</i></a>'+
                     	'<a href="javascript:void(0)"><i class="layui-icon img-icon " attr-id="'+d[i].id+'" >&#xe60d;</i></a>'+
                     	'<a href="javascript:void(0)"><i class="layui-icon del-icon " >&#xe640;</i></a>'+
                 	'</td></tr>';
@@ -214,6 +214,9 @@ var productModel = (function($){
 		})
 		$('.edit-icon').click(function(){
 			pubsub.public('/product?product_id:product_id',{'product_id':$(this).attr('attr-id')});
+		})
+		$('.edit-img-order-icon').click(function(){
+			pubsub.public('/product/editImgs?product_id=:product_id',{'product_id':$(this).attr('attr-id')})
 		})
 
 	};
