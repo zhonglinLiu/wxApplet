@@ -150,7 +150,7 @@ var proaddModel = (function($){
 					yes: function(){
 						layer.close(layerIndex);
 						// _this.initProductProperty();
-						pubsub.public('/product/productProperty?product_id='+d.product_id);
+						Route.public('/product/productProperty?product_id='+d.product_id);
 					}
 				});
 			}else{
@@ -166,7 +166,7 @@ var proaddModel = (function($){
 		requestAction.requestAddProduct(d,function(d){
 			layer.close(_this.layerIndex);
 			if(!!d.product_id){
-				pubsub.public('/product/addImage?product_id=:product_id',{ 'product_id':d.product_id});
+				Route.public('/product/addImage?product_id=:product_id',{ 'product_id':d.product_id});
 			}else{
 				console.log(d);
 			}

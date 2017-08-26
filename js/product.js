@@ -3,6 +3,10 @@ var productModel = (function($){
 		this.desktop = $('.desktop-main');
 	};
 	product.prototype.init = function(params) {
+		if(this.size){
+			this.renderProductList();
+			return;
+		}
 		if(!params){
 			this.page = 1;
 			this.size = 5;
@@ -34,8 +38,7 @@ var productModel = (function($){
 			_this.totalPage = Math.floor(d.count/_this.size);
 			_this.paging();
 			_this.getproductData(function(d){
-				// _this.renderUI(d);
-				_this.renderProductList(d);
+				_this.renderProductList();
 			});
 		})
 	};
@@ -128,7 +131,6 @@ var productModel = (function($){
 
 	product.prototype.paging = function() {
 		var _this = this;
-		var flog = false;
 		var str = '<div class="paging" id="paging"></div>';
 		this.pagebox.append($(str));
 		layui.use(['laypage', 'layer'], function(){
@@ -143,9 +145,6 @@ var productModel = (function($){
 		    jump:function(obj,first){
 		    	_this.totalPage = obj.pages;
 		    	_this.page = obj.curr;
-		    	if(flog)
-		    		_this.renderProductList();
-		    	flog = true;
 		    },
 		    hash: 'product?size=5&page'
 		  });
@@ -183,7 +182,7 @@ var productModel = (function($){
 		)
 
 		$('.product-add-icon').click(function(){
-			pubsub.public('/product/add');
+			Route.public('/product/add');
 		})
 
 		
@@ -191,7 +190,7 @@ var productModel = (function($){
 
 	product.prototype.bindProductListEvent = function() {
 		$('.img-icon').click(function(){
-			pubsub.public('/product/addImage?product_id=:product_id',{ 'product_id':$(this).attr('attr-id')});
+			Route.public('/product/addImage?product_id=:product_id',{ 'product_id':$(this).attr('attr-id')});
 		});
 		$('.edit-icon').hover(
 			function(){
@@ -210,13 +209,13 @@ var productModel = (function($){
 			function(){}
 		)
 		$('.edit-property-icon').click(function(){
-			pubsub.public('/product/addProperty?product_id=:product_id',{'product_id':$(this).attr('attr-id')})
+			Route.public('/product/addProperty?product_id=:product_id',{'product_id':$(this).attr('attr-id')})
 		})
 		$('.edit-icon').click(function(){
-			pubsub.public('/product?product_id:product_id',{'product_id':$(this).attr('attr-id')});
+			Route.public('/product?product_id:product_id',{'product_id':$(this).attr('attr-id')});
 		})
 		$('.edit-img-order-icon').click(function(){
-			pubsub.public('/product/editImgs?product_id=:product_id',{'product_id':$(this).attr('attr-id')})
+			Route.public('/product/editImgs?product_id=:product_id',{'product_id':$(this).attr('attr-id')})
 		})
 
 	};

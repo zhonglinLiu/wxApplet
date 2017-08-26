@@ -82,5 +82,11 @@ var requestAction = (function($){
 			callback && callback(res);
 		})
 	};
+
+	requestAction.prototype.requestThemeProducts = function(id,callback) {
+		this.get('theme/'+id,function(res){
+			callback && callback(res);
+		})
+	};
 	return new requestAction();
 })(jQuery)

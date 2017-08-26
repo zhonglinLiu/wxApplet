@@ -31,7 +31,7 @@ var themeModel = (function($){
                 '<div class="theme-detail" >'+
                     '<img src="'+d[i].head_img.url+'">'+
                     '<div class="theme-desc" >'+
-                    '<a href="#/theme?id='+d[i].id+'&catename='+d[i].name+'" >'+
+                    '<a href="#/theme?id='+d[i].id+
                         '<div class="name" >'+d[i].name+'</div>'+
                         '<div class="desc" >'+desc +'</div>'+
                     '</a>'+

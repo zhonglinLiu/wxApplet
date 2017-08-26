@@ -42,10 +42,10 @@ var homeModel = (function($){
 	home.prototype.bindEvent = function() {
 
 		$('#todayRegister').on('click',function(){
-			pubsub.public('todayRegister');
+			Route.public('todayRegister');
 		})
 		$('#todaySale').on('click',function(){
-			pubsub.public('todaySale');
+			Route.public('todaySale');
 		})
 	};
 	return new home;
